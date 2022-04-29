@@ -1,0 +1,18 @@
+﻿@model projetoClinica.Models.ModelEspecialidade
+@{
+    ViewBag.Title = "Cadastro da Especialidade";
+}
+
+<h2>Cadastro da Especialidade</h2>
+
+@using (Html.BeginForm("CadEsp", "Especialidade", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.LabelFor(m => m.Esp)
+    <br />
+    @Html.EditorFor(m => m.Esp)
+    <br />
+    <br />
+    <input type="submit" value="Cadastrar" />
+}
+
+@ViewBag.msgCad
